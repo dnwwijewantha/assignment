@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col col-lg-3"></div>
+  <div class="col col-lg-6">
+
+
+      <div class="form-group">
+        <br><br>
+        <h1>Fill this form to add a new country</h1>
+        <form>
+
+        <input class="form-control" type="text" id="name" [(ngModel)] = "selectedCountry.name" name="name" placeholder="enter the name of the country"><br>
+        <input class="form-control" type="text" id="desc" [(ngModel)] = "selectedCountry.desc" name="desc" placeholder="enter the description of the country">
+        <br>  <button (click)="addCountry()" class="btn btn-success" >add country</button>
+
+      </form>
+        <br><br>
+        <div>
+          <h2>This table contains all the countries that wen have added in to the database</h2>
+          <!--<button class="btn btn-primary" (click)="redirect()">show coutries</button>-->
+          <table class="table table-dark">
+
+            <tr>
+              <th>Country Name</th>
+              <th>Country Description</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+
+            <tr *ngFor="let country of countries">
+              <td>{{country.name}}</td>
+              <td>{{country.desc}}</td>
+              <td><button (click)="updatedetails(country.name)">update</button></td>
+              <td><button (click)="deleteCountry(country.name)">delete</button></td>
+            </tr>
+
+          </table>
+        </div>
+
+      </div>
+
+
+  </div>
+  <div class="col col-lg-3"></div>
+
+</div>
+
+
+
+
+
+
+<!--<div>-->
+  <!--<div *ngFor="let country of countries">-->
+    <!--<h1>{{country.name}}</h1>-->
+    <!--<h2>{{country.desc}}</h2>-->
+
+  <!--</div>-->
+<!--</div>-->

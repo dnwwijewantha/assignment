@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col col-lg-3"></div>
+  <div class="col col-lg-6">
+<br><br><br>
+<h1>Update country details</h1>
+
+<div class="form-group">
+<form>
+  <label for="name">Enter the new name</label>
+  <input class="form-control" type="text" id="name" [(ngModel)] = "selectedCountry.name" name="name" placeholder="enter the name of the country">
+
+  <br><label for="desc">Enter the descrition</label>
+  <input class="form-control" type="text" id="desc" [(ngModel)] = "selectedCountry.desc" name="desc" placeholder="enter the description of the country">
+  <br>  <button (click)="onSubmit()" class="btn btn-success">Update Details</button>
+
+</form>
+</div>
+  </div>
+  <div class="col col-lg-3"></div>
+</div>
